@@ -4,6 +4,6 @@ module org.example.drivingschool {
     requires java.sql;
 
 
-    opens org.example.drivingschool to javafx.fxml;
-    exports org.example.drivingschool;
+    opens lk.ijse to javafx.fxml;
+    exports lk.ijse;
 }

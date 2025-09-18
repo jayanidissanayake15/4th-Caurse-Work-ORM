@@ -1,4 +1,0 @@
-package org.example.drivingschool.bo.impl;
-
-public class PaymentBOImpl {
-}

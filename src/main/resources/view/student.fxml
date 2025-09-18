@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.Student"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.controller.StudentController"
+            prefHeight="700.0" prefWidth="1050.0">
 
+    <children>
+        <VBox spacing="20" alignment="TOP_CENTER" prefWidth="1050" prefHeight="700">
+
+            <Label text="Student Management"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+            <GridPane hgap="15" vgap="15" alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT"/>
+                    <ColumnConstraints prefWidth="300"/>
+                </columnConstraints>
+
+                <children>
+                    <Label text="Student ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtStudentId" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Full Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtFullName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Email:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtEmail" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <Label text="Phone:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtPhone" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                    <Label text="Address:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtAddress" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                    <Label text="Select Course:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="cmbCourse" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                </children>
+            </GridPane>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="btnSave" text="Save" prefWidth="100"/>
+                <Button fx:id="btnUpdate" text="Update" prefWidth="100"/>
+                <Button fx:id="btnDelete" text="Delete" prefWidth="100"/>
+                <Button fx:id="btnClear" text="Clear" prefWidth="100"/>
+            </HBox>
+
+            <TableView fx:id="tblStudents" prefWidth="900" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="colStudentId" text="Student ID" prefWidth="120"/>
+                    <TableColumn fx:id="colFullName" text="Full Name" prefWidth="180"/>
+                    <TableColumn fx:id="colEmail" text="Email" prefWidth="180"/>
+                    <TableColumn fx:id="colPhone" text="Phone" prefWidth="120"/>
+                    <TableColumn fx:id="colAddress" text="Address" prefWidth="180"/>
+                    <TableColumn fx:id="colCourse" text="Course" prefWidth="120"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
 </AnchorPane>
