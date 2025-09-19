@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.Lesson"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="lk.ijse.controller.LessonController"
+            prefHeight="600.0" prefWidth="900.0">
 
+    <children>
+        <VBox spacing="20" alignment="TOP_CENTER" prefWidth="900" prefHeight="600">
+
+            <Label text="Lesson Management"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+            <GridPane hgap="15" vgap="15" alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT"/>
+                    <ColumnConstraints prefWidth="300"/>
+                </columnConstraints>
+
+                <children>
+                    <Label text="Lesson ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtLessonId" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Student:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="cmbStudent" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Instructor:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="cmbInstructor" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <Label text="Course:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="cmbCourse" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                    <Label text="Date:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <DatePicker fx:id="dateLesson" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                    <Label text="Time:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtTime" promptText="HH:mm" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                    <Label text="Status:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="cmbStatus" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+                </children>
+            </GridPane>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="btnSave" text="Save" prefWidth="100"/>
+                <Button fx:id="btnUpdate" text="Update" prefWidth="100"/>
+                <Button fx:id="btnDelete" text="Delete" prefWidth="100"/>
+                <Button fx:id="btnClear" text="Clear" prefWidth="100"/>
+            </HBox>
+
+            <TableView fx:id="tblLessons" prefWidth="850" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="colLessonId" text="Lesson ID" prefWidth="100"/>
+                    <TableColumn fx:id="colStudent" text="Student" prefWidth="150"/>
+                    <TableColumn fx:id="colInstructor" text="Instructor" prefWidth="150"/>
+                    <TableColumn fx:id="colCourse" text="Course" prefWidth="150"/>
+                    <TableColumn fx:id="colDate" text="Date" prefWidth="100"/>
+                    <TableColumn fx:id="colTime" text="Time" prefWidth="100"/>
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
 </AnchorPane>

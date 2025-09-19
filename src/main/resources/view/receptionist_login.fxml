@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lk.ijse.controller.ReceptionistLogin"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <Label text="Receptionist Login"
+               layoutX="200" layoutY="50"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+        <Label text="Username:" layoutX="150" layoutY="130"/>
+        <TextField fx:id="txtUsername" layoutX="250" layoutY="125"
+                   prefWidth="200" promptText="Enter username"/>
+
+        <Label text="Password:" layoutX="150" layoutY="180"/>
+        <PasswordField fx:id="txtPassword" layoutX="250" layoutY="175"
+                       prefWidth="200" promptText="Enter password"/>
+
+        <Button fx:id="btnLogin" text="Login"
+                layoutX="250" layoutY="240" prefWidth="90"/>
+        <Button fx:id="btnCancel" text="Cancel"
+                layoutX="360" layoutY="240" prefWidth="90"/>
+
+        <Label text="Don't have an account?" layoutX="180" layoutY="300"/>
+        <Hyperlink fx:id="linkSignUp" text="Sign Up" layoutX="330" layoutY="300"/>
+    </children>
+</AnchorPane>
