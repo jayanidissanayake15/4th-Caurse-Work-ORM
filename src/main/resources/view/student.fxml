@@ -6,59 +6,68 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="lk.ijse.controller.StudentController"
-            prefHeight="700.0" prefWidth="1050.0">
+            fx:controller="lk.ijse.controller.DashBoardController"
+            prefHeight="900.0" prefWidth="1400.0">
 
     <children>
-        <VBox spacing="20" alignment="TOP_CENTER" prefWidth="1050" prefHeight="700">
 
-            <Label text="Student Management"
-                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
-
-            <GridPane hgap="15" vgap="15" alignment="CENTER">
-                <columnConstraints>
-                    <ColumnConstraints halignment="RIGHT"/>
-                    <ColumnConstraints prefWidth="300"/>
-                </columnConstraints>
-
-                <children>
-                    <Label text="Student ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-                    <TextField fx:id="txtStudentId" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-
-                    <Label text="Full Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-                    <TextField fx:id="txtFullName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-
-                    <Label text="Email:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-                    <TextField fx:id="txtEmail" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-
-                    <Label text="Phone:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-                    <TextField fx:id="txtPhone" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
-
-                    <Label text="Address:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-                    <TextField fx:id="txtAddress" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
-
-                    <Label text="Select Course:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-                    <ComboBox fx:id="cmbCourse" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
-                </children>
-            </GridPane>
-
-            <HBox spacing="15" alignment="CENTER">
-                <Button fx:id="btnSave" text="Save" prefWidth="100"/>
-                <Button fx:id="btnUpdate" text="Update" prefWidth="100"/>
-                <Button fx:id="btnDelete" text="Delete" prefWidth="100"/>
-                <Button fx:id="btnClear" text="Clear" prefWidth="100"/>
-            </HBox>
-
-            <TableView fx:id="tblStudents" prefWidth="900" prefHeight="300">
-                <columns>
-                    <TableColumn fx:id="colStudentId" text="Student ID" prefWidth="120"/>
-                    <TableColumn fx:id="colFullName" text="Full Name" prefWidth="180"/>
-                    <TableColumn fx:id="colEmail" text="Email" prefWidth="180"/>
-                    <TableColumn fx:id="colPhone" text="Phone" prefWidth="120"/>
-                    <TableColumn fx:id="colAddress" text="Address" prefWidth="180"/>
-                    <TableColumn fx:id="colCourse" text="Course" prefWidth="120"/>
-                </columns>
-            </TableView>
+        <VBox layoutX="20.0" layoutY="20.0" spacing="20" prefWidth="180" prefHeight="860" style="-fx-background-color: #ecf0f1;">
+            <Label text="Dashboard" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+            <Button fx:id="btnStudents" text="Students" prefWidth="160" prefHeight="50"/>
+            <Button fx:id="btnCourses" text="Courses" prefWidth="160" prefHeight="50"/>
+            <Button fx:id="btnLessons" text="Lessons" prefWidth="160" prefHeight="50"/>
+            <Button fx:id="btnInstructors" text="Instructors" prefWidth="160" prefHeight="50"/>
+            <Button fx:id="btnUsers" text="Users" prefWidth="160" prefHeight="50"/>
+            <Button fx:id="btnPayments" text="Payments" prefWidth="160" prefHeight="50"/>
         </VBox>
+
+
+        <AnchorPane layoutX="220.0" layoutY="20.0" prefWidth="1150.0" prefHeight="860.0" style="-fx-border-color: #2c3e50; -fx-border-width: 2;">
+            <VBox spacing="25" alignment="TOP_CENTER" prefWidth="1130" prefHeight="840" layoutX="10" layoutY="10">
+                <Label text="Student Management" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+
+                <GridPane hgap="20" vgap="20" alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT"/>
+                        <ColumnConstraints prefWidth="350"/>
+                    </columnConstraints>
+                    <children>
+
+                        <Label text="Full Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtFullName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                        <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtEmail" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                        <Label text="Phone:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtPhone" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                        <Label text="Address:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtAddress" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                        <Label text="Select Course:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="cmbCourse" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                    </children>
+                </GridPane>
+
+
+                <HBox spacing="20" alignment="CENTER">
+                    <Button fx:id="btnSave" text="Save" prefWidth="120" prefHeight="40"/>
+                    <Button fx:id="btnUpdate" text="Update" prefWidth="120" prefHeight="40"/>
+                    <Button fx:id="btnDelete" text="Delete" prefWidth="120" prefHeight="40"/>
+                    <Button fx:id="btnClear" text="Clear" prefWidth="120" prefHeight="40"/>
+                </HBox>
+
+
+                <TableView fx:id="tblStudents" prefWidth="1050" prefHeight="350">
+                    <columns>
+                        <TableColumn fx:id="colStudentId" text="Student ID" prefWidth="150"/>
+                        <TableColumn fx:id="colFullName" text="Full Name" prefWidth="200"/>
+                        <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+                        <TableColumn fx:id="colPhone" text="Phone" prefWidth="150"/>
+                        <TableColumn fx:id="colAddress" text="Address" prefWidth="200"/>
+                        <TableColumn fx:id="colCourse" text="Course" prefWidth="150"/>
+                    </columns>
+                </TableView>
+
+            </VBox>
+        </AnchorPane>
     </children>
 </AnchorPane>
