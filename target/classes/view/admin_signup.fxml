@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lk.ijse.controller.AdminSignUpController"
+            prefHeight="550.0" prefWidth="600.0">
+
+    <children>
+        <Label text="Sign Up"
+               layoutX="250" layoutY="30"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+        <Label text="Username:" layoutX="150" layoutY="80"/>
+        <TextField fx:id="txtUsername" layoutX="280" layoutY="75"
+                   prefWidth="200" promptText="Enter username"/>
+
+        <Label text="Email:" layoutX="150" layoutY="120"/>
+        <TextField fx:id="txtEmail" layoutX="280" layoutY="115"
+                   prefWidth="200" promptText="Enter email"/>
+
+        <Label text="NIC:" layoutX="150" layoutY="160"/>
+        <TextField fx:id="txtNIC" layoutX="280" layoutY="155"
+                   prefWidth="200" promptText="Enter NIC"/>
+
+        <Label text="Gender:" layoutX="150" layoutY="200"/>
+        <ComboBox fx:id="cmbGender" layoutX="280" layoutY="195" prefWidth="200"/>
+
+        <Label text="Date of Birth:" layoutX="150" layoutY="240"/>
+        <DatePicker fx:id="dpDOB" layoutX="280" layoutY="235" prefWidth="200"/>
+
+        <Label text="Mobile Number:" layoutX="150" layoutY="280"/>
+        <TextField fx:id="txtMobile" layoutX="280" layoutY="275"
+                   prefWidth="200" promptText="Enter mobile number"/>
+
+        <Label text="Password:" layoutX="150" layoutY="320"/>
+        <PasswordField fx:id="txtPassword" layoutX="280" layoutY="315"
+                       prefWidth="200" promptText="Enter password"/>
+
+        <Label text="Confirm Password:" layoutX="150" layoutY="360"/>
+        <PasswordField fx:id="txtConfirmPassword" layoutX="280" layoutY="355"
+                       prefWidth="200" promptText="Confirm password"/>
+
+        <Button fx:id="btnRegister" text="Register"
+                layoutX="280" layoutY="410" prefWidth="90"/>
+        <Button fx:id="btnCancel" text="Cancel"
+                layoutX="390" layoutY="410" prefWidth="90"/>
+
+        <Label text="Already have an account?" layoutX="200" layoutY="470"/>
+        <Hyperlink fx:id="linkLogin" text="Login" layoutX="360" layoutY="470"/>
+    </children>
+</AnchorPane>

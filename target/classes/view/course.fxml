@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.controller.DashBoardController"
+            prefWidth="1400" prefHeight="900">
+
+    <children>
+        <HBox prefWidth="1400" prefHeight="900">
+
+            <!-- Sidebar Dashboard -->
+            <VBox spacing="20" prefWidth="180" prefHeight="900" style="-fx-background-color: #ecf0f1;"
+                  alignment="TOP_CENTER">
+                <Label text="Dashboard" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+                <Button fx:id="btnStudents" text="Students" prefWidth="160" prefHeight="50"/>
+                <Button fx:id="btnCourses" text="Courses" prefWidth="160" prefHeight="50"/>
+                <Button fx:id="btnLessons" text="Lessons" prefWidth="160" prefHeight="50"/>
+                <Button fx:id="btnInstructors" text="Instructors" prefWidth="160" prefHeight="50"/>
+                <Button fx:id="btnUsers" text="Users" prefWidth="160" prefHeight="50"/>
+                <Button fx:id="btnPayments" text="Payments" prefWidth="160" prefHeight="50"/>
+            </VBox>
+
+            <!-- Main Content Area -->
+            <AnchorPane fx:id="mainContent" prefWidth="1220" prefHeight="900"
+                        style="-fx-background-color: #ffffff; -fx-border-color: #2c3e50; -fx-border-width: 2;">
+
+                <VBox fx:id="coursesPane" spacing="25" alignment="TOP_CENTER"
+                      AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+                      AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+
+                    <!-- Page Title -->
+                    <Label text="Course Management" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+                    <!-- Form Grid -->
+                    <GridPane hgap="20" vgap="15" alignment="CENTER">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" minWidth="120"/> <!-- Label column -->
+                            <ColumnConstraints halignment="LEFT" minWidth="150" maxWidth="300"/> <!-- Input column -->
+                        </columnConstraints>
+
+                        <children>
+                            <Label text="Course Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtCourseName" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="220"/>
+
+                            <Label text="Duration:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtDuration" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="150"/>
+
+                            <Label text="Fee (LKR):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtFee" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="150"/>
+                        </children>
+                    </GridPane>
+
+                    <!-- Buttons -->
+                    <HBox spacing="20" alignment="CENTER">
+                        <Button fx:id="btnSaveCourse" text="Save" prefWidth="120" prefHeight="40"/>
+                        <Button fx:id="btnUpdateCourse" text="Update" prefWidth="120" prefHeight="40"/>
+                        <Button fx:id="btnDeleteCourse" text="Delete" prefWidth="120" prefHeight="40"/>
+                        <Button fx:id="btnClearCourse" text="Clear" prefWidth="120" prefHeight="40"/>
+                    </HBox>
+
+                    <!-- Table -->
+                    <TableView fx:id="tblCourses" prefHeight="400" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colCourseId" text="Course ID" prefWidth="150"/>
+                            <TableColumn fx:id="colCourseName" text="Course Name" prefWidth="200"/>
+                            <TableColumn fx:id="colDuration" text="Duration" prefWidth="150"/>
+                            <TableColumn fx:id="colFee" text="Fee (LKR)" prefWidth="150"/>
+                        </columns>
+                    </TableView>
+
+                </VBox>
+
+            </AnchorPane>
+
+        </HBox>
+    </children>
+</AnchorPane>
