@@ -1,15 +1,13 @@
-package lk.ijse.dto;
+package lk.ijse.dto.tm;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class CourseDTO {
+public class CourseTM {
     private String courseId;
     private String courseName;
     private String duration;

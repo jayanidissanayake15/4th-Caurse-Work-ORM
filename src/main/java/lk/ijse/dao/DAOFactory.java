@@ -1,12 +1,13 @@
 package lk.ijse.dao;
 
-import lk.ijse.dao.custom.StudentDAO;
-import lk.ijse.dao.impl.StudentDAOImpl;
+import lk.ijse.dao.custom.CourseDAO;
+import lk.ijse.dao.impl.CourseDAOImpl;
+import org.hibernate.Session;
 
 public class DAOFactory {
 
-    public enum DAOType {
-        STUDENT
+    public enum DAOTypes {
+        COURSE
     }
 
     private static DAOFactory daoFactory;
@@ -20,10 +21,10 @@ public class DAOFactory {
         return daoFactory;
     }
 
-    public SuperDAO getDAO(DAOType daoType) {
-        switch (daoType) {
-            case STUDENT:
-                return new StudentDAOImpl();
+    public SuperDAO getDAO(DAOTypes type) {
+        switch (type) {
+            case COURSE:
+                return new CourseDAOImpl();
             default:
                 return null;
         }
