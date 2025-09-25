@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancCoursePage" prefHeight="500.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" xmlns="http.javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm_final_coursework.controller.ManageCourseController">
+<AnchorPane fx:id="ancCoursePage" prefHeight="500.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm_final_coursework.controller.ManageCourseController">
     <children>
         <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #2f3542; -fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <children>
@@ -288,8 +288,15 @@
                     </HBox.margin>
                     <children>
                         <BorderPane prefHeight="62.0" prefWidth="970.0">
-                            <center>
-                                <Label prefHeight="58.0" prefWidth="304.0" style="-fx-text-fill: #ffffff;" text="Manage Courses" BorderPane.alignment="CENTER">
+                            <right>
+                                <TextField fx:id="txtSearch" onKeyTyped="#search" prefHeight="26.0" prefWidth="240.0" promptText="Search Here" style="-fx-text-fill: #ffffff;" BorderPane.alignment="CENTER">
+                                    <BorderPane.margin>
+                                        <Insets bottom="30.0" right="80.0" />
+                                    </BorderPane.margin>
+                                </TextField>
+                            </right>
+                     <left>
+                                <Label prefHeight="58.0" prefWidth="442.0" style="-fx-text-fill: #ffffff;" text=" Courses  Management" BorderPane.alignment="CENTER">
                                     <font>
                                         <Font size="40.0" />
                                     </font>
@@ -300,14 +307,7 @@
                                         <DropShadow />
                                     </effect>
                                 </Label>
-                            </center>
-                            <right>
-                                <TextField fx:id="txtSearch" onKeyTyped="#search" prefHeight="26.0" prefWidth="240.0" promptText="Search Here" style="-fx-text-fill: #ffffff;" BorderPane.alignment="CENTER">
-                                    <BorderPane.margin>
-                                        <Insets bottom="30.0" right="80.0" />
-                                    </BorderPane.margin>
-                                </TextField>
-                            </right>
+                     </left>
                         </BorderPane>
                         <ImageView fitHeight="98.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true">
                             <image>
