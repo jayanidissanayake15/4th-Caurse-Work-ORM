@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancSignUpPage" prefHeight="900.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm_final_coursework.controller.SignUpPageController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="890.0" prefWidth="790.0" style="-fx-border-color: #34495e; -fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: rgba(255, 255, 255, 0.05);" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="8.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="850.0" prefWidth="700.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: rgba(255, 255, 255, 0.08);">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
+                    </HBox.margin>
+                    <effect>
+                        <DropShadow color="#0000004c" radius="12.75" width="32.0" />
+                    </effect>
+                    <children>
+                        <HBox alignment="TOP_LEFT" prefHeight="70.0" prefWidth="700.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#goToLoginPage" style="-fx-background-color: transparent; -fx-text-fill: #e0e0e0; -fx-font-weight: bold; -fx-font-size: 20px;" text="⟪ BACK">
+                                    <HBox.margin>
+                                        <Insets left="20.0" top="20.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <ImageView fitHeight="146.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets left="180.0" top="10.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@../images/symbol.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="600.0" text="Create New Account!" textFill="#f5f5f5">
+                            <font>
+                                <Font name="Times New Roman" size="36.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                            <image>
+                                <Image url="@../images/user_account-removebg-preview.png" />
+                            </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefWidth="150.0" text="- User Name -" textFill="#b0b0b0">
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="txtUserName" prefWidth="300.0" promptText="Enter User Name" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #4682b4; -fx-background-color: rgba(255, 255, 255, 0.1); -fx-text-fill: white;">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefWidth="150.0" text="- Password -" textFill="#b0b0b0">
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <PasswordField fx:id="txtPassword" prefWidth="300.0" promptText="Enter Password" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #4682b4; -fx-background-color: rgba(255, 255, 255, 0.1); -fx-text-fill: white;">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </PasswordField>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefWidth="150.0" text="- Confirm Password -" textFill="#b0b0b0">
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <PasswordField fx:id="txtConfirmPassword" prefWidth="300.0" promptText="Confirm Password" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #4682b4; -fx-background-color: rgba(255, 255, 255, 0.1); -fx-text-fill: white;">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </PasswordField>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefWidth="150.0" text="- Role -" textFill="#b0b0b0">
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ComboBox fx:id="cmbRole" prefWidth="300.0" promptText="Select Role" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #4682b4; -fx-background-color: rgba(255, 255, 255, 0.1); -fx-text-fill: white;" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefWidth="150.0" text="- Email -" textFill="#b0b0b0">
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="txtEmail" prefWidth="300.0" promptText="Enter Email" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #4682b4; -fx-background-color: rgba(255, 255, 255, 0.1); -fx-text-fill: white;">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label prefWidth="150.0" text="- Status -" textFill="#b0b0b0">
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <ComboBox fx:id="cmbStatus" prefWidth="300.0" promptText="Select Status" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #4682b4; -fx-background-color: rgba(255, 255, 255, 0.1); -fx-text-fill: white;" />
+                            </children>
+                        </HBox>
+                        <Button fx:id="btnGotIt" mnemonicParsing="false" onAction="#btnGoDashBoardOnAction" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="SIGN UP">
+                            <VBox.margin>
+                                <Insets top="50.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/black_tik-removebg-preview.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+            <effect>
+                <DropShadow color="#0000004c" radius="12.75" width="32.0" />
+            </effect>
+        </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancSigningPage" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm_final_coursework.controller.SigninController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="791.0" prefWidth="798.0" style="-fx-border-color: #34495e; -fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: rgba(255, 255, 255, 0.05);" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="8.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="742.0" prefWidth="600.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: rgba(255, 255, 255, 0.08);">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
+                    </HBox.margin>
+                    <effect>
+                        <DropShadow color="#0000004c" radius="12.75" width="32.0" />
+                    </effect>
+                    <children>
+                        <HBox alignment="TOP_LEFT" prefHeight="70.0" prefWidth="412.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#goToLoginPage" style="-fx-background-color: transparent; -fx-text-fill: #e0e0e0; -fx-font-weight: bold; -fx-font-size: 20px;" text="⟪ BACK">
+                                    <HBox.margin>
+                                        <Insets left="20.0" top="20.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                          <ImageView fitHeight="186.0" fitWidth="252.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@../images/symbol.png" />
+                              </image>
+                          </ImageView>
+                        <Label text="Login Your Account" textFill="#f5f5f5">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Times New Roman" size="36.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="103.0" fitWidth="179.0" pickOnBounds="true" preserveRatio="true">
+                            <VBox.margin>
+                                <Insets top="30.0" />
+                            </VBox.margin>
+                            <image>
+                                <Image url="@../images/login.png" />
+                            </image>
+                        </ImageView>
+                        <Label text="- User Name -" textFill="#b0b0b0">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="txtUserName" promptText="Enter User Name" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #4682b4; -fx-background-color: rgba(255, 255, 255, 0.1); -fx-text-fill: white;">
+                            <VBox.margin>
+                                <Insets left="150.0" right="150.0" top="10.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label text="- Password -" textFill="#b0b0b0">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <PasswordField fx:id="txtPassword" promptText="Enter Your Password" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-border-color: #4682b4; -fx-background-color: rgba(255, 255, 255, 0.1); -fx-text-fill: white;">
+                            <VBox.margin>
+                                <Insets left="150.0" right="150.0" top="10.0" />
+                            </VBox.margin>
+                        </PasswordField>
+                        <Button fx:id="btnGotIt" mnemonicParsing="false" onAction="#btnGoDashBoardOnAction" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="LOGIN">
+                            <VBox.margin>
+                                <Insets top="50.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+            <effect>
+                <DropShadow color="#0000004c" radius="12.75" width="32.0" />
+            </effect>
+        </HBox>
+    </children>
+</AnchorPane>
