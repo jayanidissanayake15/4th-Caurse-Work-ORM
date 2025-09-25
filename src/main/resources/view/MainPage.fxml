@@ -100,7 +100,7 @@
                <children>
                   <ImageView fx:id="smallImage" fitHeight="316.0" fitWidth="369.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/Nadat_je_geslaagd_bent_mag_je_tot_je_18de_de_weg_op_samen_met_je_coach_es__-removebg-preview.png" />
+                        <Image url="@../images/licence.png" />
                      </image>
                      <VBox.margin>
                         <Insets top="10.0" />
