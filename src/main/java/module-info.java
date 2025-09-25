@@ -1,18 +1,25 @@
-module org.example.drivingschool {
+module lk.ijse.orm_final_coursework {
     requires javafx.controls;
     requires javafx.fxml;
-    requires java.sql;
-    requires org.hibernate.orm.core;
-    // This is the correct module for Jakarta Persistence
     requires jakarta.persistence;
+    requires org.hibernate.orm.core;
     requires java.naming;
-    requires static lombok;
+    requires java.sql;
+    requires lombok;
+    requires javafx.graphics;
+    requires jbcrypt;
 
-    opens lk.ijse to javafx.fxml;
-    opens lk.ijse.controller to javafx.fxml;
-    opens lk.ijse.entity to org.hibernate.orm.core;
-    opens lk.ijse.dto to javafx.base;
-    opens lk.ijse.dto.tm to javafx.base;
+    // Hibernate & JavaFX reflection access
+    opens lk.ijse.orm_final_coursework.entity to org.hibernate.orm.core, javafx.base;
+    opens lk.ijse.orm_final_coursework.dto.tm to javafx.base;
 
-    exports lk.ijse;
+    // FXML controllers
+    opens lk.ijse.orm_final_coursework.controller to javafx.fxml;
+
+    // Exports
+    exports lk.ijse.orm_final_coursework;
+    exports lk.ijse.orm_final_coursework.controller;
+    exports lk.ijse.orm_final_coursework.dto;
+    exports lk.ijse.orm_final_coursework.dto.tm;
+    exports lk.ijse.orm_final_coursework.entity;
 }
