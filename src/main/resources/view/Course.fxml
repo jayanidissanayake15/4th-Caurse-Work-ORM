@@ -17,18 +17,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancCoursePage" prefHeight="500.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm_final_coursework.controller.ManageCourseController">
+<AnchorPane fx:id="ancCoursePage" prefHeight="500.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" xmlns="http.javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm_final_coursework.controller.ManageCourseController">
     <children>
-        <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #2f3542; -fx-border-radius: 20; -fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #2f3542; -fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <children>
-                <VBox prefHeight="658.0" prefWidth="350.0" style="-fx-border-radius: 50; -fx-background-radius: 20; -fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);" styleClass="root" stylesheets="@../styles/background.css">
+                <VBox prefHeight="658.0" prefWidth="350.0" style="-fx-border-radius: 50; -fx-background-radius: 20; -fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" styleClass="root" stylesheets="@../styles/background.css">
                     <HBox.margin>
                         <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
                     </HBox.margin>
                     <children>
                         <HBox prefHeight="24.0" prefWidth="282.0" style="-fx-border-radius: 50;">
                             <children>
-                                <Label onMouseClicked="#goToDashboard" text="HOME">
+                                <Label onMouseClicked="#goToDashboard" style="-fx-text-fill: #ffffff;" text="HOME">
                                     <HBox.margin>
                                         <Insets left="10.0" top="2.0" />
                                     </HBox.margin>
@@ -36,7 +36,7 @@
                                         <Font name="System Bold" size="14.0" />
                                     </font>
                                 </Label>
-                                <Label text="  &gt;  ">
+                                <Label style="-fx-text-fill: #ffffff;" text="  &gt;  ">
                                     <HBox.margin>
                                         <Insets top="2.0" />
                                     </HBox.margin>
@@ -44,7 +44,7 @@
                                         <Font size="14.0" />
                                     </font>
                                 </Label>
-                                <Label text="courses">
+                                <Label style="-fx-text-fill: #ffffff;" text="courses">
                                     <HBox.margin>
                                         <Insets top="2.0" />
                                     </HBox.margin>
@@ -57,12 +57,12 @@
                                 <Insets left="10.0" right="10.0" top="20.0" />
                             </VBox.margin>
                         </HBox>
-                        <VBox prefHeight="43.0" prefWidth="350.0" style="-fx-border-color: #000000; -fx-border-radius: 50;">
+                        <VBox prefHeight="43.0" prefWidth="350.0" style="-fx-border-color: #ffffff; -fx-border-radius: 50;">
                             <VBox.margin>
                                 <Insets bottom="-50.0" left="10.0" right="10.0" top="20.0" />
                             </VBox.margin>
                             <children>
-                                <Label layoutX="41.0" layoutY="21.0" text="CourseId">
+                                <Label layoutX="41.0" layoutY="21.0" style="-fx-text-fill: #ffffff;" text="CourseId">
                                     <VBox.margin>
                                         <Insets bottom="-10.0" left="20.0" right="10.0" top="20.0" />
                                     </VBox.margin>
@@ -70,7 +70,7 @@
                                         <Font size="27.0" />
                                     </font>
                                 </Label>
-                                <Label fx:id="lblCourseId" text="01">
+                                <Label fx:id="lblCourseId" style="-fx-text-fill: #ffffff;" text="01">
                                     <VBox.margin>
                                         <Insets bottom="10.0" left="200.0" top="-30.0" />
                                     </VBox.margin>
@@ -90,7 +90,7 @@
                             <children>
                                 <HBox prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <Label text="-Course Name-" textFill="#0b0101">
+                                        <Label style="-fx-text-fill: #ffffff;" text="-Course Name-">
                                             <HBox.margin>
                                                 <Insets left="40.0" />
                                             </HBox.margin>
@@ -99,7 +99,7 @@
                                 </HBox>
                                 <HBox layoutX="11.0" layoutY="11.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <ComboBox fx:id="cmbCourseName" prefHeight="26.0" prefWidth="296.0" promptText="Select Course" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;">
+                                        <ComboBox fx:id="cmbCourseName" prefHeight="26.0" prefWidth="296.0" promptText="Select Course" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;">
                                             <HBox.margin>
                                                 <Insets left="20.0" right="20.0" />
                                             </HBox.margin>
@@ -108,7 +108,7 @@
                                 </HBox>
                                 <HBox layoutX="11.0" layoutY="41.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <Label text="-Duration-" textFill="#0b0101">
+                                        <Label style="-fx-text-fill: #ffffff;" text="-Duration-">
                                             <HBox.margin>
                                                 <Insets left="40.0" />
                                             </HBox.margin>
@@ -117,7 +117,7 @@
                                 </HBox>
                                 <HBox layoutX="11.0" layoutY="72.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <ComboBox fx:id="cmbDuration" prefHeight="26.0" prefWidth="296.0" promptText="Select Duration" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;">
+                                        <ComboBox fx:id="cmbDuration" prefHeight="26.0" prefWidth="296.0" promptText="Select Duration" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;">
                                             <HBox.margin>
                                                 <Insets left="20.0" right="20.0" />
                                             </HBox.margin>
@@ -126,7 +126,7 @@
                                 </HBox>
                                 <HBox layoutX="10.0" layoutY="58.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <Label text="-Fee-" textFill="#0b0101">
+                                        <Label style="-fx-text-fill: #ffffff;" text="-Fee-">
                                             <HBox.margin>
                                                 <Insets left="40.0" />
                                             </HBox.margin>
@@ -135,7 +135,7 @@
                                 </HBox>
                                 <HBox layoutX="10.0" layoutY="76.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <ComboBox fx:id="cmbFee" prefHeight="26.0" prefWidth="296.0" promptText="Select Fee" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;">
+                                        <ComboBox fx:id="cmbFee" prefHeight="26.0" prefWidth="296.0" promptText="Select Fee" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff;">
                                             <HBox.margin>
                                                 <Insets left="20.0" right="20.0" />
                                             </HBox.margin>
@@ -144,7 +144,7 @@
                                 </HBox>
                                 <HBox layoutX="10.0" layoutY="106.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <Label text="-Description-" textFill="#0b0101">
+                                        <Label style="-fx-text-fill: #ffffff;" text="-Description-">
                                             <HBox.margin>
                                                 <Insets left="40.0" />
                                             </HBox.margin>
@@ -153,7 +153,7 @@
                                 </HBox>
                                 <HBox layoutX="10.0" layoutY="124.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <TextField fx:id="txtDescription" prefHeight="26.0" prefWidth="296.0" promptText="Quick Refresher" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;">
+                                        <TextField fx:id="txtDescription" prefHeight="26.0" prefWidth="296.0" promptText="Quick Refresher" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff; -fx-text-fill: #ffffff;">
                                             <HBox.margin>
                                                 <Insets left="20.0" right="20.0" />
                                             </HBox.margin>
@@ -162,7 +162,7 @@
                                 </HBox>
                                 <HBox layoutX="10.0" layoutY="154.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <Label text="-Instructor Id-" textFill="#0b0101">
+                                        <Label style="-fx-text-fill: #ffffff;" text="-Instructor Id-">
                                             <HBox.margin>
                                                 <Insets left="40.0" />
                                             </HBox.margin>
@@ -171,82 +171,125 @@
                                 </HBox>
                                 <HBox layoutX="10.0" layoutY="157.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <TextField fx:id="txtInstructorId" prefHeight="26.0" prefWidth="296.0" promptText="I001" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #000000;">
+                                        <TextField fx:id="txtInstructorId" prefHeight="26.0" prefWidth="296.0" promptText="I001" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff; -fx-text-fill: #ffffff;">
                                             <HBox.margin>
                                                 <Insets left="20.0" right="20.0" />
                                             </HBox.margin>
                                         </TextField>
                                     </children>
                                 </HBox>
+                                <VBox prefHeight="229.0" prefWidth="350.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #ffffff;">
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="60.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-background-color: #2e86de; -fx-text-fill: #ffffff;" text="Save" VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <effect>
+                                                <DropShadow />
+                                            </effect>
+                                        </Button>
+                                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-background-color: #4cd137; -fx-text-fill: #ffffff;" text="Update" VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <effect>
+                                                <DropShadow />
+                                            </effect>
+                                        </Button>
+                                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-background-color: #eb2f06; -fx-text-fill: #ffffff;" text="Delete" VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <effect>
+                                                <DropShadow />
+                                            </effect>
+                                        </Button>
+                                        <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-background-color: #576574; -fx-text-fill: #ffffff;" text="Reset" VBox.vgrow="ALWAYS">
+                                            <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <effect>
+                                                <DropShadow />
+                                            </effect>
+                                        </Button>
+                                    </children>
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                </VBox>
+                                <VBox prefHeight="228.0" prefWidth="370.0" spacing="15.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #ffffff;">
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" top="20.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label prefHeight="30.0" prefWidth="199.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #2e86de;" text="Enroll Student">
+                                            <VBox.margin>
+                                                <Insets left="100.0" top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font size="1.0" />
+                                            </font>
+                                        </Label>
+                                        <Label style="-fx-text-fill: #ffffff;" text="Select Student:">
+                                            <VBox.margin>
+                                                <Insets left="100.0" top="-10.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <ComboBox fx:id="cmbStudentIds" prefHeight="26.0" prefWidth="198.0" promptText="Select Student" style="-fx-border-color: #ffffff;">
+                                            <VBox.margin>
+                                                <Insets left="100.0" top="-10.0" />
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <Label style="-fx-text-fill: #ffffff;" text="Select Course:">
+                                            <VBox.margin>
+                                                <Insets left="100.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                        <ComboBox fx:id="cmbCourseIds" prefHeight="26.0" prefWidth="202.0" promptText="Select Course" style="-fx-border-color: #ffffff;">
+                                            <VBox.margin>
+                                                <Insets left="100.0" top="-10.0" />
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <Button fx:id="btnEnrollStudent" onAction="#btnEnrollStudentOnAction" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #2e86de; -fx-text-fill: white;" text="Enroll">
+                                            <VBox.margin>
+                                                <Insets left="130.0" top="10.0" />
+                                            </VBox.margin>
+                                            <effect>
+                                                <InnerShadow />
+                                            </effect>
+                                        </Button>
+                                    </children>
+                                </VBox>
                             </children>
-                        </VBox>
-                        <VBox prefHeight="229.0" prefWidth="350.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #000000;">
-                            <VBox.margin>
-                                <Insets bottom="10.0" left="10.0" right="10.0" top="60.0" />
-                            </VBox.margin>
-                            <children>
-                                <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-background-color: #1e90ff;" text="Save" VBox.vgrow="ALWAYS">
-                                    <font>
-                                        <Font name="Arial Bold" size="15.0" />
-                                    </font>
-                                    <VBox.margin>
-                                        <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
-                                    </VBox.margin>
-                                    <effect>
-                                        <DropShadow />
-                                    </effect>
-                                </Button>
-                                <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(to right, #00b09b, #96c93d);;" text="Update" VBox.vgrow="ALWAYS">
-                                    <font>
-                                        <Font name="Arial Bold" size="15.0" />
-                                    </font>
-                                    <VBox.margin>
-                                        <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
-                                    </VBox.margin>
-                                    <effect>
-                                        <DropShadow />
-                                    </effect>
-                                </Button>
-                                <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-background-color: #eb2f06;" text="Delete" VBox.vgrow="ALWAYS">
-                                    <font>
-                                        <Font name="Arial Bold" size="15.0" />
-                                    </font>
-                                    <VBox.margin>
-                                        <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
-                                    </VBox.margin>
-                                    <effect>
-                                        <DropShadow />
-                                    </effect>
-                                </Button>
-                                <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="30.0" prefWidth="300.0" style="-fx-background-radius: 20; -fx-background-color: linear-gradient(to right, #D3CCE3, #E9E4F0);;" text="Reset" VBox.vgrow="ALWAYS">
-                                    <font>
-                                        <Font name="Arial Bold" size="15.0" />
-                                    </font>
-                                    <VBox.margin>
-                                        <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
-                                    </VBox.margin>
-                                    <effect>
-                                        <DropShadow />
-                                    </effect>
-                                </Button>
-                            </children>
-                            <effect>
-                                <DropShadow />
-                            </effect>
                         </VBox>
                     </children>
                     <effect>
                         <DropShadow />
                     </effect>
                 </VBox>
-                <VBox prefHeight="20.0" prefWidth="970.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);" styleClass="root" stylesheets="@../styles/background.css" HBox.hgrow="NEVER">
+                <VBox prefHeight="20.0" prefWidth="970.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" styleClass="root" stylesheets="@../styles/background.css" HBox.hgrow="NEVER">
                     <HBox.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
                     </HBox.margin>
                     <children>
                         <BorderPane prefHeight="62.0" prefWidth="970.0">
                             <center>
-                                <Label prefHeight="58.0" prefWidth="304.0" text="Manage Courses" BorderPane.alignment="CENTER">
+                                <Label prefHeight="58.0" prefWidth="304.0" style="-fx-text-fill: #ffffff;" text="Manage Courses" BorderPane.alignment="CENTER">
                                     <font>
                                         <Font size="40.0" />
                                     </font>
@@ -259,64 +302,22 @@
                                 </Label>
                             </center>
                             <right>
-                                <TextField fx:id="txtSearch" onKeyTyped="#search" prefHeight="26.0" prefWidth="240.0" promptText="Search Here" BorderPane.alignment="CENTER">
+                                <TextField fx:id="txtSearch" onKeyTyped="#search" prefHeight="26.0" prefWidth="240.0" promptText="Search Here" style="-fx-text-fill: #ffffff;" BorderPane.alignment="CENTER">
                                     <BorderPane.margin>
                                         <Insets bottom="30.0" right="80.0" />
                                     </BorderPane.margin>
                                 </TextField>
                             </right>
                         </BorderPane>
-                        <ImageView fitHeight="126.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
-                            <VBox.margin>
-                                <Insets left="100.0" top="-20.0" />
-                            </VBox.margin>
+                        <ImageView fitHeight="98.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../images/diploma.png" />
+                                <Image url="@../images/co.jpg" />
                             </image>
+                            <VBox.margin>
+                                <Insets left="400.0" />
+                            </VBox.margin>
                         </ImageView>
-
-                        <VBox prefHeight="228.0" prefWidth="370.0" spacing="15.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #000000;">
-                            <children>
-                                <Label prefHeight="30.0" prefWidth="199.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Enroll Student" textFill="#eb2f06">
-                           <VBox.margin>
-                              <Insets left="100.0" top="10.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font size="1.0" />
-                           </font></Label>
-
-                                <Label text="Select Student:">
-                           <VBox.margin>
-                              <Insets left="100.0" top="-10.0" />
-                           </VBox.margin></Label>
-                                <ComboBox fx:id="cmbStudentIds" prefHeight="26.0" prefWidth="198.0" promptText="Select Student">
-                           <VBox.margin>
-                              <Insets left="100.0" top="-10.0" />
-                           </VBox.margin></ComboBox>
-
-                                <Label text="Select Course:">
-                           <VBox.margin>
-                              <Insets left="100.0" />
-                           </VBox.margin></Label>
-                                <ComboBox fx:id="cmbCourseIds" prefHeight="26.0" prefWidth="202.0" promptText="Select Course">
-                           <VBox.margin>
-                              <Insets left="100.0" top="-10.0" />
-                           </VBox.margin></ComboBox>
-
-                                <Button fx:id="btnEnrollStudent" onAction="#btnEnrollStudentOnAction" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #1e90ff; -fx-text-fill: white;" text="Enroll">
-                           <VBox.margin>
-                              <Insets left="130.0" top="10.0" />
-                           </VBox.margin>
-                           <effect>
-                              <InnerShadow />
-                           </effect></Button>
-                            </children>
-                     <VBox.margin>
-                        <Insets left="500.0" right="100.0" top="-60.0" />
-                     </VBox.margin>
-                        </VBox>
-
-                        <TableView fx:id="tblCourses" onMouseClicked="#OnClickedTable" prefHeight="453.0" prefWidth="886.0" VBox.vgrow="ALWAYS">
+                        <TableView fx:id="tblCourses" onMouseClicked="#OnClickedTable" prefHeight="594.0" prefWidth="889.0" VBox.vgrow="ALWAYS">
                             <columns>
                                 <TableColumn fx:id="colCourseId" prefWidth="80.00003242492676" text="courseId" />
                                 <TableColumn fx:id="colCourseName" minWidth="0.0" prefWidth="137.60002899169922" text="courseName" />

@@ -3,9 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DisplacementMap?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.FloatMap?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,11 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancDashBoardPage" prefHeight="800.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm_final_coursework.controller.DashBoardPageController">
+<AnchorPane fx:id="ancDashBoardPage" prefHeight="800.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm_final_coursework.controller.DashBoardPageController">
     <children>
-        <HBox layoutX="0.8" layoutY="8.0" prefHeight="791.0" prefWidth="1552.0" style="-fx-border-color: #2f3542; -fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="8.0">
+        <HBox layoutX="0.8" layoutY="4.8" prefHeight="794.0" prefWidth="1600.0" style="-fx-border-color: #2f3542; -fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="5.0">
             <children>
-                <VBox prefHeight="738.0" prefWidth="451.0" style="-fx-border-radius: 50; -fx-background-radius: 20; -fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);">
+                <VBox prefHeight="770.0" prefWidth="435.0" style="-fx-border-radius: 50; -fx-background-radius: 20; -fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);">
                     <HBox.margin>
                         <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
                     </HBox.margin>
@@ -27,7 +25,7 @@
                     <children>
                         <HBox prefHeight="57.0" prefWidth="350.0">
                             <children>
-                                <Label onMouseClicked="#goToLoginPage" text="&gt; BACK">
+                                <Label onMouseClicked="#goToLoginPage" style="-fx-text-fill: #ffffff;" text="&gt; BACK">
                                     <HBox.margin>
                                         <Insets left="10.0" top="20.0" />
                                     </HBox.margin>
@@ -39,7 +37,7 @@
                         </HBox>
                         <HBox layoutX="10.0" layoutY="10.0" prefHeight="93.0" prefWidth="451.0">
                             <children>
-                                <Label prefHeight="58.0" prefWidth="266.0" text=" 🚗  OVERVIEW  🚗">
+                                <Label prefHeight="58.0" prefWidth="266.0" style="-fx-text-fill: #ffffff;" text="         DashBoard">
                                     <HBox.margin>
                                         <Insets left="100.0" top="10.0" />
                                     </HBox.margin>
@@ -55,103 +53,73 @@
                                 <Insets top="10.0" />
                             </VBox.margin>
                         </HBox>
-                  <Button fx:id="btnCourse" mnemonicParsing="false" onAction="#btnGoCourseOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%); -fx-border-radius: 30; -fx-background-radius: 30;" text="COURSE">
-                     <VBox.margin>
-                        <Insets left="150.0" />
-                     </VBox.margin>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-                  <Button fx:id="btnInstructor" mnemonicParsing="false" onAction="#btnGoInstructorOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%); -fx-border-radius: 30; -fx-background-radius: 30;" text="INSTRUCTOR">
-                     <VBox.margin>
-                        <Insets left="150.0" top="30.0" />
-                     </VBox.margin>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-                  <Button fx:id="btnLessons" mnemonicParsing="false" onAction="#btnGoLessonsOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%); -fx-background-radius: 30; -fx-border-radius: 30;" text="LESSONS">
-                     <VBox.margin>
-                        <Insets left="150.0" top="30.0" />
-                     </VBox.margin>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-                  <Button fx:id="btnPayment" mnemonicParsing="false" onAction="#btnGoPaymentOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%); -fx-background-radius: 30; -fx-border-radius: 30;" text="PAYMENT">
-                     <VBox.margin>
-                        <Insets left="150.0" top="30.0" />
-                     </VBox.margin>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-                  <Button fx:id="btnStudent" mnemonicParsing="false" onAction="#btnGoStudentOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%); -fx-background-radius: 30; -fx-border-radius: 30;" text="STUDENT">
-                     <VBox.margin>
-                        <Insets left="150.0" top="30.0" />
-                     </VBox.margin>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
-                  <Button fx:id="btnUser" mnemonicParsing="false" onAction="#btnGoUserOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%); -fx-background-radius: 30; -fx-border-radius: 30;" text="USER">
-                     <VBox.margin>
-                        <Insets left="150.0" top="30.0" />
-                     </VBox.margin>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                  </Button>
+                        <Button fx:id="btnCourse" mnemonicParsing="false" onAction="#btnGoCourseOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #2c3e50; -fx-border-radius: 30; -fx-background-radius: 30; -fx-text-fill: #ffffff;" text="COURSE">
+                            <VBox.margin>
+                                <Insets left="150.0" />
+                            </VBox.margin>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                        <Button fx:id="btnInstructor" mnemonicParsing="false" onAction="#btnGoInstructorOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #2c3e50; -fx-border-radius: 30; -fx-background-radius: 30; -fx-text-fill: #ffffff;" text="INSTRUCTOR">
+                            <VBox.margin>
+                                <Insets left="150.0" top="30.0" />
+                            </VBox.margin>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                        <Button fx:id="btnLessons" mnemonicParsing="false" onAction="#btnGoLessonsOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-fill: #ffffff;" text="LESSONS">
+                            <VBox.margin>
+                                <Insets left="150.0" top="30.0" />
+                            </VBox.margin>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                        <Button fx:id="btnPayment" mnemonicParsing="false" onAction="#btnGoPaymentOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-fill: #ffffff;" text="PAYMENT">
+                            <VBox.margin>
+                                <Insets left="150.0" top="30.0" />
+                            </VBox.margin>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                        <Button fx:id="btnStudent" mnemonicParsing="false" onAction="#btnGoStudentOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-fill: #ffffff;" text="STUDENT">
+                            <VBox.margin>
+                                <Insets left="150.0" top="30.0" />
+                            </VBox.margin>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                        <Button fx:id="btnUser" mnemonicParsing="false" onAction="#btnGoUserOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-fill: #ffffff;" text="USER">
+                            <VBox.margin>
+                                <Insets left="150.0" top="30.0" />
+                            </VBox.margin>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
                     </children>
                 </VBox>
-                <VBox prefHeight="754.0" prefWidth="930.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);" HBox.hgrow="NEVER">
+                <VBox prefHeight="754.0" prefWidth="930.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: linear-gradient(to bottom, #0d1a26 0%, #1a293a 100%);" HBox.hgrow="NEVER">
                     <HBox.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
                     </HBox.margin>
                     <effect>
                         <DropShadow radius="12.75" width="32.0" />
                     </effect>
-               <children>
-                  <HBox prefHeight="130.0" prefWidth="930.0">
-                     <VBox.margin>
-                        <Insets top="20.0" />
-                     </VBox.margin>
-                     <children>
-                        <Label text="ELITE MANAGMENT SYSTEM...!">
-                           <HBox.margin>
-                              <Insets left="150.0" top="50.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font name="Times New Roman" size="40.0" />
-                           </font>
-                           <effect>
-                              <DisplacementMap>
-                                 <mapData>
-                                    <FloatMap />
-                                 </mapData>
-                              </DisplacementMap>
-                           </effect>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <ImageView fitHeight="492.0" fitWidth="809.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets left="70.0" />
-                     </VBox.margin>
-                     <image>
-                        <Image url="@../images/elite_management-removebg-preview.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="113.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets left="800.0" />
-                     </VBox.margin>
-                     <image>
-                        <Image url="@../images/Driving_School_Logo_Design_Car_Silhouette-removebg-preview.png" />
-                     </image>
-                  </ImageView>
-               </children>
+                    <children>
+                        <ImageView fitHeight="733.0" fitWidth="920.0" pickOnBounds="true" preserveRatio="true">
+                            <VBox.margin>
+                                <Insets left="70.0" />
+                            </VBox.margin>
+                            <image>
+                                <Image url="@../images/dash.png" />
+                            </image>
+                        </ImageView>
+                    </children>
                 </VBox>
             </children>
             <effect>
