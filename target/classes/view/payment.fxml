@@ -245,7 +245,7 @@
                     <children>
                         <BorderPane prefHeight="62.0" prefWidth="970.0">
                             <center>
-                                <Label prefHeight="58.0" prefWidth="360.0" text="Manage Payments" textFill="WHITE" BorderPane.alignment="CENTER">
+                                <Label prefHeight="58.0" prefWidth="411.0" text="Payment Management" textFill="WHITE" BorderPane.alignment="CENTER">
                                     <font>
                                         <Font size="40.0" />
                                     </font>

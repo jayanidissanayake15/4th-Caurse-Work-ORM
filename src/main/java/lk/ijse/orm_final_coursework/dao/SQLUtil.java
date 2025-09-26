@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class SQLUtil {
     public static <T> T execute(String sql, Object... obj) throws SQLException {
-        Connection connection = DBConnection.getInstance().getConnection();
+      Connection connection = DBConnection.getInstance().getConnection();
         PreparedStatement ps = connection.prepareStatement(sql);
 
         for (int i = 0; i < obj.length; i++) {
