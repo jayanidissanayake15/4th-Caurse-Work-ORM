@@ -188,7 +188,7 @@
                                 </HBox>
                                 <HBox layoutX="10.0" layoutY="200.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <TextField fx:id="txtDateOfBirth" prefHeight="26.0" prefWidth="296.0" promptText="2000.01.01" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff; -fx-background-color: #1a293a; -fx-text-fill: #ffffff;">
+                                        <TextField fx:id="txtDateOfBirth" prefHeight="26.0" prefWidth="296.0" promptText="2000-01-01" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff; -fx-background-color: #1a293a; -fx-text-fill: #ffffff;">
                                             <HBox.margin>
                                                 <Insets left="20.0" right="20.0" />
                                             </HBox.margin>
@@ -206,7 +206,7 @@
                                 </HBox>
                                 <HBox layoutX="10.0" layoutY="244.0" prefHeight="17.0" prefWidth="350.0">
                                     <children>
-                                        <TextField fx:id="txtRegistrationDate" prefHeight="26.0" prefWidth="296.0" promptText="2025-09-25" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff; -fx-background-color: #1a293a; -fx-text-fill: #ffffff;">
+                                        <TextField fx:id="txtRegistrationDate" prefHeight="26.0" prefWidth="296.0" promptText="2025-09-25" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-border-color: #ffffff; -fx-background-color: #1a293a; -fx-text-fill: #ffffff;" text="2025-09-15">
                                             <HBox.margin>
                                                 <Insets left="20.0" right="20.0" />
                                             </HBox.margin>
